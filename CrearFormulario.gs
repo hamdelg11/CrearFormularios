@@ -1,6 +1,84 @@
-function CrearFormulario() {
+function doGet(e){
 
-  var sheet = SpreadsheetApp.openById("1AxAgmb8dTDdpb9-25dO7WowQsE_dXWGVhQocXlcNx4k").getSheetByName('Hoja 1');
+  var index = HtmlService.createHtmlOutputFromFile("index");
+
+  
+   return index.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+ // return HtmlService.createHtmlOutput(index).setTitle("Subir archivo")
+
+
+}
+
+
+
+function guardarArchivo(form){
+
+  var carpeta = DriveApp.createFolder("Carpeta temporal")
+  var archivo = carpeta.createFile(form.archivo)
+
+  var nameArchivo = archivo.getName()
+  
+  try {
+
+    nameArchivo = nameArchivo || "microsoft-excel.xlsx";
+
+    var excelFile = DriveApp.getFilesByName(nameArchivo).next();
+    var fileId = excelFile.getId();
+    var folderId = Drive.Files.get(fileId).parents[0].id;
+    var blob = excelFile.getBlob();
+    var resource = {
+      title: excelFile.getName(),
+      mimeType: MimeType.GOOGLE_SHEETS,
+      parents: [{id: folderId}],
+    };
+
+    Drive.Files.insert(resource, blob);
+
+  } catch (f) {
+    Logger.log(f.toString());
+  }
+  
+  carpetaId = carpeta.getId();
+  
+  
+  var idsheet= ListarHCGoogle(carpetaId);
+  
+  return idsheet;
+  
+  
+  
+
+
+  }
+
+
+
+function ListarHCGoogle(carpetaId){
+
+
+  var carpeta = DriveApp.getFolderById(carpetaId);
+
+  var docs = carpeta.getFilesByType(MimeType.GOOGLE_SHEETS);
+
+    while (docs.hasNext()) {
+
+     var doc = docs.next();
+
+      var idnueva= doc.getId();
+
+    }
+  
+   var idFormulario = crearFormulario(idnueva)
+  
+   return idFormulario;
+
+}
+ 
+
+
+function crearFormulario(idSheet) {
+
+  var sheet = SpreadsheetApp.openById(idSheet).getSheetByName('Hoja1');
   var lastRow = sheet.getLastRow(); //Obtiene la última fila
   var lastCol = sheet.getLastColumn(); //Obtiene la última columna
 
@@ -28,8 +106,8 @@ function CrearFormulario() {
 
             case 'MULTIPLE':
                 var requerido= true;
-                var opciones = item.slice(3,lastCol) //Obtiene todas las respuestas para la pregunta
-                var filtrado = opciones.filter(opcion => opcion != '') //Elimina celdas vacias
+                var opciones = item.slice(3,lastCol); //Obtiene todas las respuestas para la pregunta
+                var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
                 if(item[2]=='no'){ 
                   requerido = false;
                 }
@@ -41,7 +119,7 @@ function CrearFormulario() {
             case 'CHECKBOX':
                 var requerido= true;
                 var opciones = item.slice(3,lastCol) //Obtiene todas las respuestas para la pregunta
-                var filtrado = opciones.filter(opcion => opcion != '') //Elimina celdas vacias
+                var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
                 if(item[2]=='no'){
                   requerido = false;
                 }
@@ -55,7 +133,7 @@ function CrearFormulario() {
             case 'LISTA': 
                 var requerido= true;
                 var opciones = item.slice(3,lastCol) //Obtiene todas las respuestas para la pregunta
-                var filtrado = opciones.filter(opcion => opcion != '') //Elimina celdas vacias
+                var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
                 if(item[2]=='no'){
                   requerido = false;
                 }
@@ -73,9 +151,10 @@ function CrearFormulario() {
 
 
 
-    var url = form.getPublishedUrl(); //Obtener URL del formulario
+    var url = form.getPublishedUrl();
 
 
-    Logger.log(url);
+    return url;
 }
+
 
