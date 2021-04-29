@@ -147,8 +147,8 @@ function crearFormulario(idSheet) {
         
     })
   })
-
-    if(correos.length != 0){
+  
+   if(correos.length != 0 && correos[0] != 'CORREO DEL/LOS EDITOR/EDITORES'){
       if(correos.length == 1){
         form.addEditor(correos.toString());  
 
@@ -157,6 +157,7 @@ function crearFormulario(idSheet) {
       }
 
     }
+    
     
 
 
