@@ -4,7 +4,6 @@ function doGet(e){
 
   
    return index.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
- // return HtmlService.createHtmlOutput(index).setTitle("Subir archivo")
 
 
 }
@@ -84,6 +83,7 @@ function crearFormulario(idSheet) {
 
   var tituloForm= sheet.getRange(1,1).getValues()[0]; //Obtiene el valor del titulo de la primera celda
   var data = sheet.getDataRange().getValues(); //Rango de la información en el sheets
+  var correos = sheet.getRange(1,2,1,lastCol).getValues()[0].filter(function(element) { return element != ''});
 
   var form = FormApp.create(tituloForm)  //Creación del formulario
        .setTitle(tituloForm);  
@@ -96,7 +96,7 @@ function crearFormulario(idSheet) {
             case 'TEXTO':
                 var requerido= true;
 
-                if(item[2]=='no'){
+                if(item[2]=='NO'){
                   requerido = false;
                 }
                 form.addTextItem()  
@@ -108,7 +108,7 @@ function crearFormulario(idSheet) {
                 var requerido= true;
                 var opciones = item.slice(3,lastCol); //Obtiene todas las respuestas para la pregunta
                 var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
-                if(item[2]=='no'){ 
+                if(item[2]=='NO'){ 
                   requerido = false;
                 }
                 form.addMultipleChoiceItem()  
@@ -120,7 +120,7 @@ function crearFormulario(idSheet) {
                 var requerido= true;
                 var opciones = item.slice(3,lastCol) //Obtiene todas las respuestas para la pregunta
                 var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
-                if(item[2]=='no'){
+                if(item[2]=='NO'){
                   requerido = false;
                 }
                 
@@ -134,7 +134,7 @@ function crearFormulario(idSheet) {
                 var requerido= true;
                 var opciones = item.slice(3,lastCol) //Obtiene todas las respuestas para la pregunta
                 var filtrado = opciones.filter(function(element) { return element != ''}) //Elimina celdas vacias
-                if(item[2]=='no'){
+                if(item[2]=='NO'){
                   requerido = false;
                 }
                 
@@ -147,11 +147,23 @@ function crearFormulario(idSheet) {
         
     })
   })
+
+    if(correos.length != 0){
+      if(correos.length == 1){
+        form.addEditor(correos.toString());  
+
+      }else{
+        form.addEditors(correos);   
+      }
+
+    }
     
 
 
 
-    var url = form.getPublishedUrl();
+    //var url = form.getPublishedUrl();
+    var url = form.getEditUrl();
+  
 
 
     return url;
