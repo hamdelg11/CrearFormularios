@@ -14,7 +14,7 @@ La plantilla es un archivo en excel el cual debe estar correctamente ordenado pa
 
 ![](imagenes/Screenshot_1.png)
 
-* _Para poder agregar editores del formulario, se deberá ingresar su correo electronico a partir de la fila 1, columna 2. Se deberá ingresar el correo en cada celda, no hay limite de editores, puedes ingresar los que quieras, respetando que cada correo deberá ir en una celda hacía la derecha_
+* _Para poder agregar editores del formulario, se deberá ingresar su correo electronico a partir de la fila 1, columna 2. Se deberá ingresar el correo en cada celda, desde la celda B1 hacía la derecha que sería C1,D1 y así sucesivamente_
 
 ![](imagenes/Screenshot_2.png)
 
