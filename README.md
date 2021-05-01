@@ -7,6 +7,12 @@ _Subimos el archivo XLS o XLSX a google Drive de la cual lo convierte a un forma
 * Cuenta de google
 * Descargar la plantilla de [Drive](https://drive.google.com/file/d/1o2gaD6GY252wknrc1DEf4dBICZdQOm9A/view?usp=sharing)
 
+### Explicación de la plantilla 📌
+La plantilla es un archivo en excel el cual debe estar correctamente ordenado para poder crear el formulario sin ningún error. Es por ello que aquí explico paso por paso como llenarla.
+
+
+
+
 ### Instalación 🔧
 
 _1.- Ir a la plataforma de google de [Script](https://script.google.com) y le damos en Start Scripting e iniciamos sesion con la
