@@ -10,6 +10,10 @@ _Subimos el archivo XLS o XLSX a google Drive de la cual lo convierte a un forma
 ### Explicación de la plantilla 📌
 La plantilla es un archivo en excel el cual debe estar correctamente ordenado para poder crear el formulario sin ningún error. Es por ello que aquí explico paso por paso como llenarla.
 
+* _En la primera posición de Fila 1, Columna 1 se ingresará el titulo que llevará el formulario_
+
+![](imagenes/Screenshot_1.png)
+
 
 
 
