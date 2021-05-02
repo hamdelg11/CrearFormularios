@@ -24,8 +24,21 @@ La plantilla es un archivo en excel el cual debe estar correctamente ordenado pa
 ![](imagenes/Screenshot_3.png)
 
 * _En la segunda columna, a partir de la fila 3 se insertará el tipo de pregunta que aparecerá en el formulario_
+> (RESPETAR SOLO ESCRIBIR EN MAYÚSCULAS PARA QUE SEA RECONOCIDO)
 
 ![](imagenes/Screenshot_4.png)
+
+Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se describen a continuación:
+
+```
+ TEXTO: permite al encuestado ingresar una sola línea de texto.
+
+```
+
+```
+ MULTIPLE: permite al encuestado seleccionar una opción de una lista de botones de opciones.
+
+```
 
 
 
