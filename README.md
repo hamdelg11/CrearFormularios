@@ -19,6 +19,15 @@ La plantilla es un archivo en excel el cual debe estar correctamente ordenado pa
 
 ![](imagenes/Screenshot_2.png)
 
+* _En la primera columna, a partir de la fila 3 se insertarán los titulos de todas las preguntas que llevará el formulario_
+
+![](imagenes/Screenshot_3.png)
+
+* _En la segunda columna, a partir de la fila 3 se insertará el tipo de pregunta que aparecerá en el formulario_
+
+![](imagenes/Screenshot_4.png)
+
+
 
 
 
