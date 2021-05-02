@@ -5,10 +5,11 @@ _Subimos el archivo XLS o XLSX a google Drive de la cual lo convierte a un forma
 ### Pre-requisitos 📋
 
 * Cuenta de google
-* Descargar la plantilla de [Drive](https://drive.google.com/file/d/1o2gaD6GY252wknrc1DEf4dBICZdQOm9A/view?usp=sharing)
+* Descargar la plantilla de [Drive](https://drive.google.com/file/d/1kPHLfkWEpo-YPiOKvckquIPhyDrVPhl8/view?usp=sharing)
 
 ### Explicación de la plantilla 📌
-La plantilla es un archivo en excel el cual debe estar correctamente ordenado para poder crear el formulario sin ningún error. Es por ello que aquí explico paso por paso como llenarla.
+La plantilla es un archivo en excel el cual debe estar correctamente ordenado para poder crear el formulario sin ningún error. Es por ello que aquí explico paso por paso como llenarla, además una cosa muy importante es no cambiarle el nombre la hoja de la plantilla ya que con esa lo identifica la hoja que contiene los datos para el formulario.
+
 
 * _En la posición fila 1, columna 1 se ingresará el titulo que llevará el formulario_
 
