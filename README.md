@@ -36,11 +36,29 @@ Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se d
 ```
 
 ```
- MULTIPLE: permite al encuestado seleccionar una opción de una lista de botones de opciones.
+ MULTIPLE: permite al encuestado seleccionar una opción de una lista de botones de varias opciones.
 
 ```
 
+```
+ LISTA: permite al encuestado seleccionar una opción de una lista desplegable. 
 
+```
+
+```
+ CHECKBOX: permite al encuestado seleccionar una o más casillas de verificación.
+
+```
+
+* _En la tercera columna, a partir de la fila 3 se colocorá SI o NO para especificar si la pregunta es de carácter obligatorio o no._
+> (RESPETAR SOLO ESCRIBIR EN MAYÚSCULAS PARA QUE SEA RECONOCIDO)
+
+![](imagenes/Screenshot_5.png)
+
+*_En la cuarta columna, a partir de la fila 3 se colocarán todas las respuestas de cada pregunta, cada respuesta deberá ir en una celda así hacía la derecha como lo especificado en los correos de los editores_
+> (LOS TIPOS TEXTOS DEBERÁN IR VACIOS YA QUE EL ENCUESTADO INGRESA DE FORMA MANUAL LA RESPUESTA)
+
+![](imagenes/Screenshot_6.png)
 
 
 
