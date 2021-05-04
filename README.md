@@ -62,7 +62,7 @@ Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se d
 ```
 
 ```
- TIEMPO: permite al encuestado indicar una fecha y hora.
+ FECHA/TIEMPO: permite al encuestado indicar una fecha y hora.
 
 ```
 
