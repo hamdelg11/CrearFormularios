@@ -66,7 +66,10 @@ Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se d
 
 ```
 
+```
+ PARRAFO: permite al encuestado ingresar un bloque de texto.
 
+```
 
 
 
