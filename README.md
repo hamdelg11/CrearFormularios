@@ -51,6 +51,27 @@ Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se d
 
 ```
 
+```
+ FECHA: permite al encuestado indicar una fecha.
+
+```
+
+```
+ TIEMPO: permite al encuestado indicar un período de tiempo.
+
+```
+
+```
+ TIEMPO: permite al encuestado indicar una fecha y hora.
+
+```
+
+
+
+
+
+
+
 * _En la tercera columna, a partir de la fila 3 se colocorá SI o NO para especificar si la pregunta es de carácter obligatorio o no._
 > (RESPETAR SOLO ESCRIBIR EN MAYÚSCULAS PARA QUE SEA RECONOCIDO)
 
