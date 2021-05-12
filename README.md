@@ -71,6 +71,13 @@ Hay por el momento 4 tipos de preguntas: TEXTO, MULTIPLE, LISTA Y CHECKBOX. Se d
 
 ```
 
+```
+ SECUENCIA:  pregunta que permite al encuestado elegir una opción de una secuencia numerada de botones de opción. El Pprimer elemento debe ser 1. El límite superior 
+ debe estar entre 3 y 10
+
+```
+
+
 
 
 
